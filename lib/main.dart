@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hortija_startup/screens/login/login_screen.dart';
 import 'package:hortija_startup/screens/welcome_screen.dart';
 
 void main() {
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: WelcomeScreen(),
+      home: LoginScreen(),
     );
   }
 }

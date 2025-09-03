@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hortija_startup/config/size_config.dart';
 import 'package:hortija_startup/features/custom_button.dart';
+import 'package:hortija_startup/screens/login/login_screen.dart';
 import 'package:hortija_startup/theme/colors.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -56,6 +57,10 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 CustomButton(
                   text: "Iniciar",
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                  },
                 )
               ],
             ),
