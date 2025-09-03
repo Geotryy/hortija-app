@@ -15,11 +15,12 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController txtEmail = TextEditingController();
   final TextEditingController txtSenha = TextEditingController();
 
+    bool _remember = false;
+
+
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
-    // ignore: no_leading_underscores_for_local_identifiers
-    bool _remember = false;
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Column(
@@ -79,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         Checkbox(
                           checkColor: Colors.white,
-                          shape: const CircleBorder(), // 🔵 check redondo
+                          shape: const CircleBorder(), // 
                           activeColor: AppColors.primaryOrange,
                           materialTapTargetSize:
                               MaterialTapTargetSize.shrinkWrap,
