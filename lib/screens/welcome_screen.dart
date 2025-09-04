@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hortija_startup/config/size_config.dart';
+import 'package:hortija_startup/features/custom_button.dart';
+import 'package:hortija_startup/screens/login/login_screen.dart';
 import 'package:hortija_startup/theme/colors.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -27,43 +29,38 @@ class WelcomeScreen extends StatelessWidget {
                   fit: BoxFit.cover,
                   width: SizeConfig.wp(60),
                 ),
-
-                Column(children: [Center(
-                  child: Text(
-                    "Mais negócio, menos viagem perdida",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: AppColors.primaryOrange,
-                        fontWeight: FontWeight.bold,
-                        fontSize: SizeConfig.hp(4)),
-                  ),
-                ),
-                SizedBox(height: SizeConfig.hp(2),),
-                Center(
-                  child: Text(
-                    "Aqui você encontra produtores verificados, compra com segurança e otimiza sua rota de coleta.",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: AppColors.lightGreen,
-                        fontSize: SizeConfig.hp(2)),
-                  ),
-                ),],),
-                
-                SizedBox(
-                  width: SizeConfig.screenWidth,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.primaryGreen),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
+                Column(
+                  children: [
+                    Center(
                       child: Text(
-                        'Iniciar',
+                        "Mais negócio, menos viagem perdida",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Colors.white, fontSize: SizeConfig.hp(2)),
+                            color: AppColors.primaryOrange,
+                            fontWeight: FontWeight.bold,
+                            fontSize: SizeConfig.hp(4)),
                       ),
                     ),
-                  ),
+                    SizedBox(
+                      height: SizeConfig.hp(2),
+                    ),
+                    Center(
+                      child: Text(
+                        "Aqui você encontra produtores verificados, compra com segurança e otimiza sua rota de coleta.",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: AppColors.lightGreen,
+                            fontSize: SizeConfig.hp(2)),
+                      ),
+                    ),
+                  ],
+                ),
+                CustomButton(
+                  text: "Iniciar",
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                  },
                 )
               ],
             ),
