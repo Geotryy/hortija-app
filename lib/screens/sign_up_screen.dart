@@ -3,20 +3,18 @@ import 'package:hortija_startup/config/size_config.dart';
 import 'package:hortija_startup/features/custom_button.dart';
 import 'package:hortija_startup/features/custom_text_field.dart';
 import 'package:hortija_startup/features/text_custom_auth.dart';
-import 'package:hortija_startup/screens/sign_up_screen.dart';
 import 'package:hortija_startup/theme/colors.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController txtEmail = TextEditingController();
-  final TextEditingController txtSenha = TextEditingController();
-
+class _SignUpScreenState extends State<SignUpScreen> {
+  TextEditingController txtEmail = TextEditingController();
+  TextEditingController txtSenha = TextEditingController();
   bool _remember = false;
 
   @override
@@ -28,10 +26,10 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           // Logo
           Padding(
-            padding: EdgeInsets.symmetric(vertical: SizeConfig.hp(10)),
+            padding: EdgeInsets.symmetric(vertical: SizeConfig.hp(5)),
             child: Image.asset(
               "assets/images/logo-hortija.png",
-              width: SizeConfig.wp(50),
+              width: SizeConfig.wp(30),
             ),
           ),
 
@@ -52,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Login",
+                        "Cadastro",
                         style: TextStyle(
                           color: AppColors.primaryGreen,
                           fontSize: SizeConfig.wp(9),
@@ -60,14 +58,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       const SizedBox(height: 8),
-                      Text(
-                        "Entre com a sua conta",
-                        style: TextStyle(
-                          color: AppColors.lightGreen,
-                          fontSize: 16,
-                        ),
-                      ),
+                      
                       const SizedBox(height: 20),
+                      CustomTextField(
+                          icon: Icons.email,
+                          label: "Nome Completo",
+                          controller: txtEmail),
                       CustomTextField(
                           icon: Icons.email,
                           label: "E-mail",
@@ -78,52 +74,40 @@ class _LoginScreenState extends State<LoginScreen> {
                         controller: txtSenha,
                         isSecret: true,
                       ),
+                      CustomTextField(
+                          icon: Icons.email,
+                          label: "Telefone",
+                          controller: txtEmail),
+                      CustomTextField(
+                        icon: Icons.lock,
+                        label: "Endereço",
+                        controller: txtSenha,
+                        isSecret: true,
+                      ),
+                      CustomTextField(
+                          icon: Icons.email,
+                          label: "Cidade/UF",
+                          controller: txtEmail),
+                      CustomTextField(
+                        icon: Icons.lock,
+                        label: "Número",
+                        controller: txtSenha,
+                        isSecret: true,
+                      ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            children: [
-                              Checkbox(
-                                checkColor: Colors.white,
-                                shape: const CircleBorder(), //
-                                activeColor: AppColors.primaryOrange,
-                                materialTapTargetSize:
-                                    MaterialTapTargetSize.shrinkWrap,
-                                value: _remember,
-                                onChanged: (v) {
-                                  setState(() {
-                                    _remember = v ?? false;
-                                  });
-                                },
-                              ),
-                            const SizedBox(width: 4),
-                          Text(
-                            "Sempre lembrar",
-                            style: TextStyle(
-                              color: AppColors.lightGray,
-                              fontSize: 14,
-                            ),
-                          ),],
-                          ),
                           
-                         
-                         TextButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "Esqueceu a Senha?",
-                                  style:
-                                      TextStyle(color: AppColors.primaryOrange),
-                                )),
-                        
+                          const SizedBox(width: 4),
+                          SizedBox(
+                            width: SizeConfig.wp(10),
+                          ),
                         ],
                       ),
                       SizedBox(
                         height: SizeConfig.hp(4),
                       ),
-                      CustomButton(text: "Login", onPressed: () {}),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      CustomButton(text: "Cadastrar", onPressed: () {}),
+                      
                       TextCustomAuth(onPressed: () {
                         Navigator.push(
                           context,
