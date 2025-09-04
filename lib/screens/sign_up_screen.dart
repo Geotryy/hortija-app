@@ -15,7 +15,6 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController txtEmail = TextEditingController();
   TextEditingController txtSenha = TextEditingController();
-  bool _remember = false;
 
   @override
   Widget build(BuildContext context) {
