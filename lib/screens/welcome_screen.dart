@@ -49,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                         "Aqui você encontra produtores verificados, compra com segurança e otimiza sua rota de coleta.",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: AppColors.lightGreen,
+                            color: AppColors.primaryGreen,
                             fontSize: SizeConfig.hp(2)),
                       ),
                     ),
