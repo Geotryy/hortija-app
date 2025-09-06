@@ -26,12 +26,12 @@ class _CustomCardProfileState extends State<CustomCardProfile> {
               ),
               color: AppColors.cardBG),
           width: SizeConfig.screenWidth,
-          height: SizeConfig.hp(5),
+          height: SizeConfig.hp(6),
           child: Row(
             children: [
               Icon(
                 widget.icon,
-                size: SizeConfig.wp(4),
+                size: SizeConfig.wp(6),
               ),
               SizedBox(
                 width: 10,
@@ -39,7 +39,7 @@ class _CustomCardProfileState extends State<CustomCardProfile> {
               Text(
                 widget.text,
                 style: TextStyle(
-                    fontSize: SizeConfig.wp(3.5),
+                    fontSize: SizeConfig.wp(4),
                     color: AppColors.primaryText,
                     fontWeight: FontWeight.w600),
               )

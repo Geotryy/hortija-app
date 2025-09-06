@@ -33,7 +33,7 @@ class _BaseScreenState extends State<BaseScreen> {
               Container(
                 color: AppColors.background,
               ),
-             ProfileScreen()
+              ProfileScreen()
             ]),
         bottomNavigationBar: Container(
             decoration: BoxDecoration(
@@ -42,7 +42,7 @@ class _BaseScreenState extends State<BaseScreen> {
                     topRight: Radius.circular(40),
                     topLeft: Radius.circular(40))),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
+              padding: EdgeInsets.symmetric(horizontal: SizeConfig.wp(8), vertical: SizeConfig.hp(1.2)),
               child: GNav(
                   selectedIndex: currentIndex,
                   gap: 8,
@@ -57,8 +57,11 @@ class _BaseScreenState extends State<BaseScreen> {
                   },
                   tabs: [
                     CustomGButton(icon: Icons.home, text: "Home"),
-                    CustomGButton(icon: Icons.person_pin_circle, text: "Produtores"),
-                    CustomGButton(icon: Icons.local_grocery_store_rounded, text: "Compras"),
+                    CustomGButton(
+                        icon: Icons.person_pin_circle, text: "Produtores"),
+                    CustomGButton(
+                        icon: Icons.local_grocery_store_rounded,
+                        text: "Compras"),
                     CustomGButton(icon: Icons.person_sharp, text: "Home"),
                   ]),
             )));
@@ -68,13 +71,14 @@ class _BaseScreenState extends State<BaseScreen> {
 class CustomGButton extends GButton {
   CustomGButton({super.key, required super.icon, required super.text})
       : super(
-          iconSize: SizeConfig.wp(5),
+          iconSize: SizeConfig.wp(6),
           iconActiveColor: Colors.white,
           iconColor: AppColors.iconGray,
           textColor: AppColors.iconGray,
           textStyle: TextStyle(
-            fontSize: SizeConfig.hp(1.5),
+            fontSize: SizeConfig.hp(1.6),
             color: Colors.white,
+            fontWeight: FontWeight.bold
           ),
         );
 }

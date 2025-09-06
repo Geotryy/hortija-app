@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hortija_startup/screens/base/base_screen.dart';
 import 'package:hortija_startup/screens/welcome_screen.dart';
+import 'package:hortija_startup/theme/colors.dart';
 
 
 void main() {
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'HortiJá',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.background),
         useMaterial3: true,
       ),
       home: WelcomeScreen(),

@@ -40,15 +40,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Text(
                   "sergiogerboni@gmail.com",
                   style: TextStyle(
-                      color: AppColors.iconGray, fontSize: SizeConfig.wp(3)),
+                      color: AppColors.iconGray, fontSize: SizeConfig.wp(4)),
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 CustomCardProfile(text: "Editar Perfil", icon: Icons.person),
-                CustomCardProfile(text: "Editar Perfil", icon: Icons.person),
-                CustomCardProfile(text: "Editar Perfil", icon: Icons.person),
-                CustomCardProfile(text: "Editar Perfil", icon: Icons.person),
+                CustomCardProfile(text: "Histórico de Compras", icon: Icons.shopping_cart_rounded),
+                CustomCardProfile(text: "Minhas Avaliações", icon: Icons.star_rounded),
+                CustomCardProfile(text: "Ajuda", icon: Icons.help_rounded)
               ],
             ),
           ),
