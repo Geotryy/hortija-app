@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hortija_startup/screens/base_screen.dart';
-import 'package:hortija_startup/screens/login/login_screen.dart';
+import 'package:hortija_startup/screens/base/base_screen.dart';
 import 'package:hortija_startup/screens/welcome_screen.dart';
+
 
 void main() {
   runApp(const MyApp());

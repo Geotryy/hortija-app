@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hortija_startup/config/size_config.dart';
+import 'package:hortija_startup/screens/profile/profile_screen.dart';
 import 'package:hortija_startup/theme/colors.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -33,9 +33,7 @@ class _BaseScreenState extends State<BaseScreen> {
               Container(
                 color: AppColors.background,
               ),
-              Container(
-                color: AppColors.background,
-              ),
+             ProfileScreen()
             ]),
         bottomNavigationBar: Container(
             decoration: BoxDecoration(
@@ -59,9 +57,9 @@ class _BaseScreenState extends State<BaseScreen> {
                   },
                   tabs: [
                     CustomGButton(icon: Icons.home, text: "Home"),
-                    CustomGButton(icon: Icons.home, text: "Home"),
-                    CustomGButton(icon: Icons.home, text: "Home"),
-                    CustomGButton(icon: Icons.home, text: "Home"),
+                    CustomGButton(icon: Icons.person_pin_circle, text: "Produtores"),
+                    CustomGButton(icon: Icons.local_grocery_store_rounded, text: "Compras"),
+                    CustomGButton(icon: Icons.person_sharp, text: "Home"),
                   ]),
             )));
   }
