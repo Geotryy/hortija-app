@@ -3,6 +3,7 @@ import 'package:hortija_startup/config/size_config.dart';
 import 'package:hortija_startup/features/custom_button.dart';
 import 'package:hortija_startup/features/custom_text_field.dart';
 import 'package:hortija_startup/features/text_custom_auth.dart';
+import 'package:hortija_startup/screens/base_screen.dart';
 import 'package:hortija_startup/screens/sign_up_screen.dart';
 import 'package:hortija_startup/theme/colors.dart';
 
@@ -120,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: SizeConfig.hp(4),
                       ),
-                      CustomButton(text: "Login", onPressed: () {}),
+                      CustomButton(text: "Login", onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => BaseScreen()));}),
                       SizedBox(
                         height: 10,
                       ),

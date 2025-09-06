@@ -50,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: AppColors.lightGreen,
-                            fontSize: SizeConfig.hp(2)),
+                            fontSize: SizeConfig.hp(1.9)),
                       ),
                     ),
                   ],
