@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hortija_startup/screens/base/base_screen.dart';
 import 'package:hortija_startup/screens/welcome_screen.dart';
 import 'package:hortija_startup/theme/colors.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.background),
         useMaterial3: true,
       ),
-      home: WelcomeScreen(),
+      home: BaseScreen(),
     );
   }
 }

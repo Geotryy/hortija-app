@@ -17,13 +17,14 @@ class CustomCardCategory extends StatelessWidget {
     SizeConfig.init(context);
     return GestureDetector(
       child: Container(
-        width: SizeConfig.wp(25),
+        padding: EdgeInsets.all(SizeConfig.wp(2)),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: const Color(0XFFFFD174),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CircleAvatar(
               backgroundColor: Colors.white,
