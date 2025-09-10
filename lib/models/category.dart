@@ -9,7 +9,7 @@ class Category with _$Category {
     required String id,
     required String name,
     required String slug,
-    String? imageUrl, // <- novo campo
+    required String imageUrl, // <- novo campo
     @Default(true) bool isActive,
     required DateTime createdAt,
     required DateTime updatedAt,

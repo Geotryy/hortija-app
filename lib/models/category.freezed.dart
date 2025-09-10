@@ -23,7 +23,7 @@ mixin _$Category {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get slug => throw _privateConstructorUsedError;
-  String? get imageUrl => throw _privateConstructorUsedError; // <- novo campo
+  String get imageUrl => throw _privateConstructorUsedError; // <- novo campo
   bool get isActive => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
   DateTime get updatedAt => throw _privateConstructorUsedError;
@@ -47,7 +47,7 @@ abstract class $CategoryCopyWith<$Res> {
       {String id,
       String name,
       String slug,
-      String? imageUrl,
+      String imageUrl,
       bool isActive,
       DateTime createdAt,
       DateTime updatedAt});
@@ -71,7 +71,7 @@ class _$CategoryCopyWithImpl<$Res, $Val extends Category>
     Object? id = null,
     Object? name = null,
     Object? slug = null,
-    Object? imageUrl = freezed,
+    Object? imageUrl = null,
     Object? isActive = null,
     Object? createdAt = null,
     Object? updatedAt = null,
@@ -89,10 +89,10 @@ class _$CategoryCopyWithImpl<$Res, $Val extends Category>
           ? _value.slug
           : slug // ignore: cast_nullable_to_non_nullable
               as String,
-      imageUrl: freezed == imageUrl
+      imageUrl: null == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -121,7 +121,7 @@ abstract class _$$CategoryImplCopyWith<$Res>
       {String id,
       String name,
       String slug,
-      String? imageUrl,
+      String imageUrl,
       bool isActive,
       DateTime createdAt,
       DateTime updatedAt});
@@ -161,10 +161,10 @@ class __$$CategoryImplCopyWithImpl<$Res>
           ? _value.slug
           : slug // ignore: cast_nullable_to_non_nullable
               as String,
-      imageUrl: freezed == imageUrl
+      imageUrl: null == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -188,7 +188,7 @@ class _$CategoryImpl implements _Category {
       {required this.id,
       required this.name,
       required this.slug,
-      this.imageUrl,
+      required this.imageUrl,
       this.isActive = true,
       required this.createdAt,
       required this.updatedAt});
@@ -203,7 +203,7 @@ class _$CategoryImpl implements _Category {
   @override
   final String slug;
   @override
-  final String? imageUrl;
+  final String imageUrl;
 // <- novo campo
   @override
   @JsonKey()
@@ -262,7 +262,7 @@ abstract class _Category implements Category {
       {required final String id,
       required final String name,
       required final String slug,
-      final String? imageUrl,
+      required final String imageUrl,
       final bool isActive,
       required final DateTime createdAt,
       required final DateTime updatedAt}) = _$CategoryImpl;
@@ -277,7 +277,7 @@ abstract class _Category implements Category {
   @override
   String get slug;
   @override
-  String? get imageUrl; // <- novo campo
+  String get imageUrl; // <- novo campo
   @override
   bool get isActive;
   @override

@@ -11,7 +11,7 @@ _$CategoryImpl _$$CategoryImplFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
       name: json['name'] as String,
       slug: json['slug'] as String,
-      imageUrl: json['imageUrl'] as String?,
+      imageUrl: json['imageUrl'] as String,
       isActive: json['isActive'] as bool? ?? true,
       createdAt: DateTime.parse(json['createdAt'] as String),
       updatedAt: DateTime.parse(json['updatedAt'] as String),

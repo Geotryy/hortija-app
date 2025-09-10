@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hortija_startup/config/size_config.dart';
+import 'package:hortija_startup/screens/home/home_screen.dart';
 import 'package:hortija_startup/screens/profile/profile_screen.dart';
 import 'package:hortija_startup/theme/colors.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -24,9 +25,7 @@ class _BaseScreenState extends State<BaseScreen> {
             controller: pageController,
             physics: NeverScrollableScrollPhysics(),
             children: [
-              Container(
-                color: AppColors.background,
-              ),
+              HomeScreen(),
               Container(
                 color: AppColors.background,
               ),
