@@ -30,20 +30,33 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           SizedBox(
-            height: SizeConfig.hp(15), // altura fixa pro ListView
+            height: SizeConfig.hp(10),
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: kDefaultCategories.length,
               itemBuilder: (BuildContext context, int index) {
                 final category = kDefaultCategories[index];
                 return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: SizeConfig.wp(2)),
+                  padding: EdgeInsets.only(left: SizeConfig.wp(3)),
                   child: CustomCardCategory(
                     image: category.imageUrl,
                     name: category.name,
                   ),
                 );
               },
+            ),
+          ),
+          
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: SizeConfig.wp(3), vertical: SizeConfig.hp(2)),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(SizeConfig.wp(3)),
+              child: Image.asset(
+                "assets/images/welcome-banner.png",
+                width: double.infinity, // ocupa toda a largura
+                fit: BoxFit.fitWidth, // ajusta pela largura, sem cortar
+                filterQuality: FilterQuality.high,
+              ),
             ),
           ),
         ],

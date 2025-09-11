@@ -17,28 +17,30 @@ class CustomCardCategory extends StatelessWidget {
     SizeConfig.init(context);
     return GestureDetector(
       child: Container(
-        padding: EdgeInsets.all(SizeConfig.wp(2)),
+        padding: EdgeInsets.all(SizeConfig.wp(1)),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(SizeConfig.wp(8)),
           color: const Color(0XFFFFD174),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
               backgroundColor: Colors.white,
               radius: SizeConfig.wp(8),
               backgroundImage: AssetImage(image),
             ),
-            SizedBox(height: SizeConfig.hp(1)),
+            SizedBox(width: SizeConfig.wp(2)),
             Text(
               name,
               style: TextStyle(
+color: Color(0XFF505050),
                 fontSize: SizeConfig.wp(4),
                 fontWeight: FontWeight.w500,
               ),
             ),
+SizedBox(width: SizeConfig.wp(2)),
           ],
         ),
       ),
