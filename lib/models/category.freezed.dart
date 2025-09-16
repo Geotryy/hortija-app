@@ -143,7 +143,7 @@ class __$$CategoryImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? slug = null,
-    Object? imageUrl = freezed,
+    Object? imageUrl = null,
     Object? isActive = null,
     Object? createdAt = null,
     Object? updatedAt = null,
