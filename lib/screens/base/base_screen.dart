@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hortija_startup/config/size_config.dart';
 import 'package:hortija_startup/screens/home/home_screen.dart';
+import 'package:hortija_startup/screens/produtores/produtores_screen.dart';
 import 'package:hortija_startup/screens/profile/profile_screen.dart';
 import 'package:hortija_startup/theme/colors.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -26,9 +27,7 @@ class _BaseScreenState extends State<BaseScreen> {
             physics: NeverScrollableScrollPhysics(),
             children: [
               HomeScreen(),
-              Container(
-                color: AppColors.background,
-              ),
+              ProdutoresScreen(),
               Container(
                 color: AppColors.background,
               ),
@@ -41,7 +40,8 @@ class _BaseScreenState extends State<BaseScreen> {
                     topRight: Radius.circular(40),
                     topLeft: Radius.circular(40))),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: SizeConfig.wp(8), vertical: SizeConfig.hp(1.2)),
+              padding: EdgeInsets.symmetric(
+                  horizontal: SizeConfig.wp(8), vertical: SizeConfig.hp(1.2)),
               child: GNav(
                   selectedIndex: currentIndex,
                   gap: 8,
@@ -75,9 +75,8 @@ class CustomGButton extends GButton {
           iconColor: AppColors.iconGray,
           textColor: AppColors.iconGray,
           textStyle: TextStyle(
-            fontSize: SizeConfig.hp(1.6),
-            color: Colors.white,
-            fontWeight: FontWeight.bold
-          ),
+              fontSize: SizeConfig.hp(1.6),
+              color: Colors.white,
+              fontWeight: FontWeight.bold),
         );
 }

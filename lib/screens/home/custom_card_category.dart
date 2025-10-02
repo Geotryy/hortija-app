@@ -35,12 +35,12 @@ class CustomCardCategory extends StatelessWidget {
             Text(
               name,
               style: TextStyle(
-color: Color(0XFF505050),
+                color: Color(0XFF505050),
                 fontSize: SizeConfig.wp(4),
                 fontWeight: FontWeight.w500,
               ),
             ),
-SizedBox(width: SizeConfig.wp(2)),
+            SizedBox(width: SizeConfig.wp(2)),
           ],
         ),
       ),

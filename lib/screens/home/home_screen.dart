@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hortija_startup/config/size_config.dart';
 import 'package:hortija_startup/data/list_categories.dart';
 import 'package:hortija_startup/screens/home/custom_card_category.dart';
+import 'package:hortija_startup/screens/home/custom_card_product.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,8 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
         children: [
           Padding(
             padding: EdgeInsets.all(SizeConfig.wp(4)),
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: (BuildContext context, int index) {
                 final category = kDefaultCategories[index];
                 return Padding(
-                  padding: EdgeInsets.only(left: SizeConfig.wp(3)),
+                  padding: EdgeInsets.only(left: SizeConfig.wp(3), right: SizeConfig.wp(3)),
                   child: CustomCardCategory(
                     image: category.imageUrl,
                     name: category.name,
@@ -59,6 +59,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
+        Row(children: [
+                    SizedBox(width: 10,),
+
+          CustomCardProduct(),
+          SizedBox(width: 20,),
+          CustomCardProduct()
+        ],)
         ],
       ),
     );
