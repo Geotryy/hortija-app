@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hortija_startup/screens/produtores/custom_card_produtor.dart';
+import 'package:hortija_startup/screens/produtor/custom_card_produtor.dart';
 
 class ProdutoresScreen extends StatefulWidget {
   const ProdutoresScreen({super.key});
@@ -17,7 +17,7 @@ class _ProdutoresScreenState extends State<ProdutoresScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [CustomCardProdutor()],
+          children: [CustomCardProdutor(),SizedBox(height: 30,), CustomCardProdutor()],
         ),
       ),
     );
